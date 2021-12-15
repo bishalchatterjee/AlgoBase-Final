@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ProblemsFragment"
+    android:id="@+id/frame_layout1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_back">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="322dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/krona_one"
+            android:text="DSA Problems"
+            android:textAlignment="gravity"
+            android:textColor="@color/theme_text"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollview3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.179"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.84" />
+
+        <ImageView
+            android:id="@+id/menu_iv"
+            android:layout_width="51dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/menu_vector"
+            android:tint="@color/theme_text"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <ScrollView
+            android:id="@+id/scrollview3"
+            android:layout_width="match_parent"
+            android:layout_height="635dp"
+            android:fadeScrollbars="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbarStyle="insideOverlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/p_1" />
+
+                <include layout="@layout/p_2" />
+
+                <include layout="@layout/p_3" />
+
+                <include layout="@layout/p_4" />
+
+                <include layout="@layout/p_5" />
+
+                <include layout="@layout/p_6" />
+
+                <include layout="@layout/p_7" />
+
+                <include layout="@layout/p_8" />
+
+                <include layout="@layout/p_9" />
+
+                <include layout="@layout/p_10" />
+
+                <include layout="@layout/p_11" />
+
+                <include layout="@layout/p_12" />
+
+                <include layout="@layout/p_13" />
+
+                <include layout="@layout/p_14" />
+
+                <include layout="@layout/p_15" />
+
+                <include layout="@layout/p_16" />
+
+                <include layout="@layout/p_17" />
+
+                <include layout="@layout/p_18" />
+
+                <include layout="@layout/p_19" />
+
+                <include layout="@layout/p_20" />
+
+                <include layout="@layout/p_21" />
+
+                <include layout="@layout/p_22" />
+
+                <include layout="@layout/p_23" />
+
+                <include layout="@layout/p_24" />
+
+                <include layout="@layout/p_25" />
+
+                <include layout="@layout/p_26" />
+
+                <include layout="@layout/p_27" />
+
+                <include layout="@layout/p_28" />
+
+                <include layout="@layout/p_29" />
+
+                <include layout="@layout/p_30" />
+
+                <include layout="@layout/p_31" />
+
+                <include layout="@layout/p_32" />
+
+                <include layout="@layout/p_33" />
+
+                <include layout="@layout/p_34" />
+
+                <include layout="@layout/p_35" />
+
+                <include layout="@layout/p_36" />
+
+                <include layout="@layout/p_37" />
+
+                <include layout="@layout/p_38" />
+
+                <include layout="@layout/p_39" />
+
+                <include layout="@layout/p_40" />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
