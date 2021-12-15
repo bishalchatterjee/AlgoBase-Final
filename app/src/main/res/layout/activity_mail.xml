@@ -4,60 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="40dp"
-    android:layout_marginTop="100dp"
-    android:layout_marginEnd="40dp"
-    android:layout_marginBottom="100dp"
-    android:background="@drawable/thin_back_alt"
+    android:background="@color/theme_back"
     tools:context=".MailActivity">
 
-
-    <EditText
-        android:id="@+id/feedback_email"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/send_Btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/feedback_content"
-        android:layout_width="match_parent"
-        android:layout_height="131dp"
-        android:ems="10"
-        android:gravity="start|top"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/send_Btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedback_email"
-        app:layout_constraintVertical_bias="0.197" />
-
-    <Button
-        android:id="@+id/send_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/custom_background"
-        android:drawableEnd="@drawable/send_vector"
-        android:paddingEnd="10dp"
-        android:text="Send"
-        android:textColor="@color/theme_text"
+        android:background="@drawable/thin_back_alt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="218dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/thin_border"
+            android:fontFamily="@font/krona_one"
+            android:padding="5dp"
+            android:text="Feedback"
+            android:textAlignment="center"
+            android:textColor="@color/theme_text"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/feedback_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="299dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/thin_back_alt"
+            android:ems="10"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="appprojectalgobase@gmail.com"
+            android:textColor="@color/theme_text"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/thin_back_alt"
+            android:layout_below="@+id/feedback_email"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Type Your Feedback Here..."
+            android:inputType="textMultiLine"
+            android:paddingStart="10dp"
+            android:paddingTop="20dp"
+            android:textColor="@color/theme_text"
+            android:textColorHint="@color/theme_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_below="@+id/feedback_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/thin_back_alt"
+            android:drawableEnd="@drawable/send_vector"
+            android:paddingEnd="10dp"
+            android:text="Send"
+            android:textColor="@color/theme_text" />
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

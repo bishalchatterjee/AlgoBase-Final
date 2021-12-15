@@ -6,10 +6,4 @@
         <item>Version</item>
         <item>Developer Info</item>
     </string-array>
-    <string-array name="drowpdown2">
-        <item>[ ꜰᴇᴇᴅʙᴀᴄᴋ ᴍᴇɴᴜ ]</item>
-        <item>Mail us</item>
-        <item>Report a Problem/Bug</item>
-        <item>Request to Add/Review</item>
-    </string-array>
 </resources>

@@ -37,12 +37,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 public class MenuActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Button login_btn, logout_btn;
     TextView hi_tv, name_tv, app_title_menu, logged_usernamer,logged__gmail,Account_info_title1,Account_info_title2,not_loggedIn;
-    Spinner spinner1, spinner2;
+    Spinner spinner1;
     SwitchCompat theme_switch;
-    ImageView share_iv, rate_iv, accountinfo_iv, support_iv,gmail_iv;
+    ImageView share_iv, rate_iv, accountinfo_iv, support_iv,gmail_iv,feedback_iv;
+    RelativeLayout AccountInfo;
     private AlertDialog.Builder builder;
     private AlertDialog custom_dialog;
-    RelativeLayout AccountInfo;
     Animation app_name_animation, customer_support;
 
     //Rate(Play-Store) function
@@ -86,6 +86,12 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Toast.makeText(MenuActivity.this, "Email Copied to Clipboard", Toast.LENGTH_LONG).show();
     }
+    //feedback intent
+    public void feedback(View view) {
+        Intent intent = (new Intent(getApplicationContext(), MailActivity.class));
+        startActivity(intent);
+        finish();
+    }
    //Spinner1
     public void versionInfo(View view){
         builder=new AlertDialog.Builder(this);
@@ -100,30 +106,6 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
         builder.setView(aboutPopUp2);
         custom_dialog=builder.create();
         custom_dialog.show();
-    }
-   //Spinner 2
-    public void mailUs(View view){
-        builder=new AlertDialog.Builder(this);
-        View aboutPopUp3= getLayoutInflater().inflate(R.layout.mail_feedback,null);
-        builder.setView(aboutPopUp3);
-        custom_dialog=builder.create();
-        custom_dialog.show();
-    }
-    public void reportProblem(View view){
-        builder=new AlertDialog.Builder(this);
-        View aboutPopUp4= getLayoutInflater().inflate(R.layout.report_feedback,null);
-        builder.setView(aboutPopUp4);
-        custom_dialog=builder.create();
-        custom_dialog.show();
-    }
-    public void requestReviewAdd(View view){
-        builder=new AlertDialog.Builder(this);
-        View aboutPopUp5= getLayoutInflater().inflate(R.layout.request_feedback,null);
-        builder.setView(aboutPopUp5);
-        custom_dialog=builder.create();
-        custom_dialog.show();
-    }
-    public void sendFeedback(View view){
     }
 
 
@@ -145,7 +127,7 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
         GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(this);
 
 
-        //linking
+        //linking IDs'
         login_btn = findViewById(R.id.login_btn);
         logout_btn = findViewById(R.id.logout_btn);
 
@@ -167,9 +149,9 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
         accountinfo_iv = findViewById(R.id.accountinfo_iv);
         support_iv = findViewById(R.id.support_iv);
         gmail_iv = findViewById(R.id.gmail_iv);
+        feedback_iv = findViewById(R.id.feedback_iv);
 
         spinner1 = findViewById(R.id.spinner1);
-        spinner2 = findViewById(R.id.spinner2);
 
         AccountInfo=findViewById(R.id.AccountInfo);
         AccountInfo.setVisibility(RelativeLayout.GONE);
@@ -185,11 +167,6 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter1);
         spinner1.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.drowpdown2, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
-        spinner2.setOnItemSelectedListener(this);
-
 
 
         int nightModeFlags = getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
@@ -233,6 +210,12 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
                 builder.setView(aboutPopUp1);
                 custom_dialog=builder.create();
                 custom_dialog.show();
+            }
+        });
+        feedback_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              feedback(view);
             }
         });
 
@@ -313,7 +296,6 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
                             AccountInfo.setVisibility(RelativeLayout.GONE);
                         }
                     },5000);
-
                 }
             });
         }
@@ -331,11 +313,6 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //making Spinner text null
         ((TextView) view).setText(null);
-//        String text = adapter1.getItemAtPosition(position).toString();
-//        Toast.makeText(adapter1.getContext(), text, Toast.LENGTH_LONG).show();
-
-        Spinner spinner1 = (Spinner) parent;
-        if (spinner1.getId() == R.id.spinner1) {
             switch (position) {
                 case 0:
                     break;
@@ -346,29 +323,7 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
                     developerInfo(view);
                     break;
             }
-        } else {
-
-            Spinner spinner2 = (Spinner) parent;
-            if (spinner2.getId() == R.id.spinner2) {
-                switch (position) {
-                    case 0:
-                        break;
-                    case 1:
-                        Intent intent=(new Intent(getApplicationContext(), MailActivity.class));
-                        startActivity(intent);
-                        finish();
-//                        mailUs(view);
-                        break;
-                    case 2:
-                        reportProblem(view);
-                        break;
-                    case 3:
-                        requestReviewAdd(view);
-                        break;
-                }
-            }
         }
-    }
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }

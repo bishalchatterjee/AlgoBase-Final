@@ -32,17 +32,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="262dp"
-        android:layout_marginEnd="10dp"
-        android:dropDownWidth="match_parent"
+    <ImageView
+        android:id="@+id/feedback_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="12dp"
         android:overScrollMode="never"
         android:padding="5dp"
-        android:popupBackground="@drawable/thin_border"
-        android:spinnerMode="dropdown"
+        android:src="@drawable/feedback"
+        android:tint="@color/theme_menu_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
