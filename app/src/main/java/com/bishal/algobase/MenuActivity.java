@@ -90,7 +90,6 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
     public void feedback(View view) {
         Intent intent = (new Intent(getApplicationContext(), MailActivity.class));
         startActivity(intent);
-        finish();
     }
    //Spinner1
     public void versionInfo(View view){

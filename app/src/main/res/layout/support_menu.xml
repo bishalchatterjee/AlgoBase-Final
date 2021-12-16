@@ -86,7 +86,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="283dp"
+        android:layout_width="285dp"
         android:layout_height="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="40dp"
@@ -94,7 +94,6 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:layout_constraintVertical_bias="0.035" />

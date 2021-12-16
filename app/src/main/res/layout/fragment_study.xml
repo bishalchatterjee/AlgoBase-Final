@@ -220,6 +220,70 @@
                             android:padding="10dp"
                             android:text="“Make it work, make it right, make it fast.” – Kent Beck"
                             android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“With hard work and effort, you can achieve anything.” – Kent Beck"
+                            android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“It’s not about money or connections – it’s the willingness to outwork and outlearn everyone.” – Mark Cuban"
+                            android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“We have to stop optimizing for programmers and start optimizing for users.” – Jeff Atwood"
+                            android:textColor="@color/theme_cv_text" />
+                        <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="“ If you optimize everything, you will always be unhappy.” - Donald Knuth"
+                        android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“Talk is cheap.Show me the code.” - Linus Torvalds"
+                            android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“ Small minds are concerned with the extraordinary, great minds with the ordinary.” – Blaise Pascal"
+                            android:textColor="@color/theme_cv_text" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="“As a programmer, it is your job to put yourself out of business. What you do today can be automated tomorrow.” – Doug McIlroy"
+                            android:textColor="@color/theme_cv_text" />
+
 
 
                     </ViewFlipper>
